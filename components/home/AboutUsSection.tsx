@@ -40,15 +40,15 @@ const AboutSection: React.FC = () => {
 
 
         <motion.div className="flex-1" variants={itemVariants}>
-          <div className="relative w-full h-80 md:h-[400px] rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/wallpaperflare.com_wallpaper.jpg" 
-              alt="عن شركتنا"
-              width={200}
-              height={200}
-              className="object-cover w-full h-full"
-            />
-          </div>
+         <div className="relative w-full h-64 md:h-96">
+           <Image
+             src="/wallpaperflare.com_wallpaper.jpg"
+             alt="عن شركتنا"
+             width={200}
+             height={200}
+             className="w-full h-full rounded-lg"
+           />
+         </div>
         </motion.div>
       </motion.div>
     </section>

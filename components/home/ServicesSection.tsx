@@ -37,7 +37,7 @@ const ServicesSection: React.FC = () => {
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
         {services.map((service, index) => (
-          <motion.a
+          <motion.div
             key={index}
             className="bg-white rounded-xl p-8 flex flex-col items-center shadow-md hover:shadow-xl transition cursor-pointer"
             initial="hidden"
@@ -45,23 +45,21 @@ const ServicesSection: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
             custom={index}
             variants={cardVariants}
-            href='/services'
           >
-            <div className="mb-5">{service.icon}</div>
-            <h3 className="text-2xl font-semibold text-center text-gray-700">{service.title}</h3>
-          </motion.a>
+            <Link href={"/services"}>
+               <div className="mb-5">{service.icon}</div>
+               <h3 className="text-2xl font-semibold text-center text-gray-700">{service.title}</h3>
+           </Link>
+          </motion.div>
         ))}
       </div>
 
-      <Link href={"/services"}>
-      
       <motion.button
         // whileHover={{ scale: 1.05 }}
         className="mt-10 m-auto w-fit block text-lg border border-blue-400 cursor-pointer text-blue-400 px-6 py-3 rounded-sm font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
       >
         عرض جميع الخدمات
       </motion.button>
-      </Link>
     </section>
   );
 };
