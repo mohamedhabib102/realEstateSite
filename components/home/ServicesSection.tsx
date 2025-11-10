@@ -54,12 +54,14 @@ const ServicesSection: React.FC = () => {
         ))}
       </div>
 
+      <Link href={"/services"}>
       <motion.button
         // whileHover={{ scale: 1.05 }}
         className="mt-10 m-auto w-fit block text-lg border border-blue-400 cursor-pointer text-blue-400 px-6 py-3 rounded-sm font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
       >
         عرض جميع الخدمات
       </motion.button>
+        </Link>
     </section>
   );
 };
