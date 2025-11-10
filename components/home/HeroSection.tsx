@@ -27,9 +27,12 @@ const HeroSection: React.FC = () => {
         transition={{ duration: 1 }}
         className="relative z-10 text-center text-white px-4 max-w-3xl"
       >
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          مرحباً بك في <span className="text-blue-400">RealEstate</span> – بوابتك لعالم العقارات بسهولة وأمان
-        </h1>
+<h1 className="text-4xl md:text-6xl font-bold mb-6 text-center">
+  <span className="block">مرحباً بك في</span>
+  <span className="block text-blue-400 my-2">RealEstate</span>
+  <span className="block">بوابتك لعالم العقارات بسهولة وأمان</span>
+</h1>
+
 
         <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
           موقعنا يربط بين الملاك والمستأجرين والمستثمرين في سوق العقارات من خلال منصة متكاملة تشمل خدمات البيع، الإيجار، التسويق، وإدارة العقارات.
