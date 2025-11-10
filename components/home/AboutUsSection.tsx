@@ -44,8 +44,9 @@ const AboutSection: React.FC = () => {
             <Image
               src="/wallpaperflare.com_wallpaper.jpg" 
               alt="عن شركتنا"
-              fill
-              className="object-cover"
+              width={200}
+              height={200}
+              className="object-cover w-full h-full"
             />
           </div>
         </motion.div>
