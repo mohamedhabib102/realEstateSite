@@ -1,15 +1,16 @@
-// ServicesGrid.tsx
+"use client"
+import { motion } from 'framer-motion'; 
 import React from 'react';
-import Image from 'next/image'; // لاستخدام صور SVG
+import Image from 'next/image';
 
-// 1. تعريف واجهة (Interface) لنوع البيانات باستخدام TypeScript
+
 interface ServiceItem {
-  iconPath: string; // مسار الأيقونة (مثلاً: /images/home.svg)
+  iconPath: string; 
   title: string;
   description: string;
 }
 
-// 2. مصفوفة البيانات (Array of Objects)
+
 const services: ServiceItem[] = [
   {
     iconPath: '/images/sales.svg',
@@ -17,17 +18,17 @@ const services: ServiceItem[] = [
     description: 'Seamless buying and selling experiences with professional guidance',
   },
   {
-    iconPath: '/images/rentalssvg.svg', // تأكد من مسار الأيقونة الصحيح
+    iconPath: '/images/rentalssvg.svg',
     title: 'Rentals',
     description: 'Find your perfect rental property with our extensive portfolio',
   },
   {
-    iconPath: '/images/marketing.svg', // تأكد من مسار الأيقونة الصحيح
+    iconPath: '/images/marketing.svg', 
     title: 'Marketing',
     description: 'Strategic marketing your property’s visibility and value',
   },
   {
-    iconPath: '/images/consulting.svg', // تأكد من مسار الأيقونة الصحيح
+    iconPath: '/images/consulting.svg',
     title: 'Consulting',
     description: 'Expert advice on real estate investments and market opportunities',
   },
@@ -45,7 +46,16 @@ const ServicesGrid: React.FC = () => {
 
           {services.map((service, index) => (
  
-            <div 
+            <motion.div 
+             initial={{ y: 100, opacity: 0 }} 
+              whileInView={{ y: 0, opacity: 1 }} 
+              viewport={{ once: true }}
+              transition={{
+                type: "tween",
+                stiffness: 300,
+                duration: 0.6,
+                delay: 0.2,
+              }} 
               key={index} 
               className={`p-6 rounded-[12px] bg-[#F8F8F8] border border-[#284C7E40]`}
               style={{ minHeight: '250px' }} 
@@ -70,7 +80,7 @@ const ServicesGrid: React.FC = () => {
               <p className="text-sm text-[#4B5563] font-normal">
                 {service.description}
               </p>
-            </div>
+            </motion.div>
           ))}
 
         </div>

@@ -1,4 +1,5 @@
-// Properties.tsx
+"use client"
+import { motion } from 'framer-motion'; 
 import Image from "next/image";
 import CustomTitle from "../ui/CustomTitle"
 
@@ -18,7 +19,6 @@ interface Property {
 
 
 const featuredProperties: Property[] = [
-  // ... (مصفوفة البيانات كما هي)
   {
     id: 1,
     imagePath: "/images/featured.png", 
@@ -59,7 +59,7 @@ const featuredProperties: Property[] = [
 
 
 
-// دالة مساعدة للأيقونات (نستخدم Placeholder paths)
+
 const Icon = ({ path }: { path: string }) => (
     <span className="w-4 h-4 inline-block align-middle mr-1 text-gray-400">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
@@ -81,7 +81,17 @@ const Properties:React.FC = () => {
             />
 
 
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+            <motion.div 
+              initial={{ y: 100, opacity: 0 }} 
+              whileInView={{ y: 0, opacity: 1 }} 
+              viewport={{ once: true }}
+              transition={{
+                type: "tween",
+                stiffness: 300,
+                duration: 0.6,
+                delay: 0.2,
+              }}             
+            className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
                 {featuredProperties.map((feat) => (
                     <div 
                     className="flex flex-col rounded-[11px] bg-white overflow-hidden border border-[#284C7E]/25 shadow-md"
@@ -160,7 +170,7 @@ const Properties:React.FC = () => {
                         </div>
                     </div>
                 ))}
-            </div>
+            </motion.div>
             </div>
         </section>
     )

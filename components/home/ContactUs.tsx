@@ -1,9 +1,5 @@
-
-
-
-
-
-// components/ContactSection.tsx
+"use client"
+import { motion } from 'framer-motion';
 import React from "react";
 import Image from "next/image";
 import CustomTitle from "../ui/CustomTitle";
@@ -13,9 +9,18 @@ const ContactSection: React.FC = () => {
     <section className="py-16 bg-[#F6F6F6]">
         <div className="container mx-auto px-3.5">
         <div className="grid md:grid-cols-2 gap-10 items-center">
-        <div>
 
-
+        <motion.div
+          initial={{ x: -100, opacity: 0 }} 
+           whileInView={{ x: 0, opacity: 1 }}
+           viewport={{ once: true }} 
+           transition={{
+             type: "tween",
+             stiffness: 300,
+             duration: 0.6,
+             delay: 0.2,
+           }}
+        >
         <CustomTitle
           subTitle="Get in Touch"
           title="Let's Find Your Perfect Property"
@@ -83,10 +88,20 @@ const ContactSection: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Right Side - Form */}
-        <div className="bg-white p-8 rounded-2xl shadow_Us border border-[#E5E7EB]">
+
+        <motion.div 
+           initial={{ x: 100, opacity: 0 }} 
+           whileInView={{ x: 0, opacity: 1 }} 
+           viewport={{ once: true }}
+           transition={{
+             type: "tween",
+             stiffness: 300,
+             duration: 0.6,
+             delay: 0.2,
+           }}        
+        className="bg-white p-8 rounded-2xl shadow_Us border border-[#E5E7EB]">
           <form className="space-y-5">
             <div>
               <label className="block text-sm font-medium text-(--Secondary-txt) mb-2">
@@ -128,7 +143,7 @@ const ContactSection: React.FC = () => {
               Send Message
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
         </div>
     </section>

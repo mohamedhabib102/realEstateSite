@@ -1,3 +1,5 @@
+"use client"
+import { motion } from 'framer-motion';
 import CustomTitle from "../ui/CustomTitle";
 import Image from "next/image";
 
@@ -7,7 +9,17 @@ const About: React.FC = () => {
       <div className="container mx-auto px-3.5">
         <div className="mt-[60px] flex flex-col lg:flex-row items-start justify-between gap-[75px]">
         
-        <div className="flex-1">
+        <motion.div 
+           initial={{ x: -100, opacity: 0 }} 
+           whileInView={{ x: 0, opacity: 1 }}
+           viewport={{ once: true }} 
+           transition={{
+             type: "tween",
+             stiffness: 300,
+             duration: 0.6,
+             delay: 0.2,
+           }}
+                 className="flex-1">
             <CustomTitle state={true} subTitle="About Havenix" space={true}/>
             <h2 className="text-(--Secondary-txt) text-4xl md:text-4xl font-bold leading-snug mb-3">
               Building Trust Through Excellence
@@ -57,10 +69,20 @@ const About: React.FC = () => {
                 </span>
               </div>
             </div>
-          </div>
+          </motion.div>
 
 
-          <div className="flex-1 rounded-2xl overflow-hidden lg:h-[445px] lg:w-[453px] ">
+          <motion.div 
+           initial={{ x: 100, opacity: 0 }} 
+           whileInView={{ x: 0, opacity: 1 }} 
+           viewport={{ once: true }}
+           transition={{
+             type: "tween",
+             stiffness: 300,
+             duration: 0.6,
+             delay: 0.2,
+           }}          
+          className="flex-1 rounded-2xl overflow-hidden lg:h-[445px] lg:w-[453px] ">
             <Image
               src="/images/about.png" 
               alt="Luxury living room"
@@ -68,7 +90,7 @@ const About: React.FC = () => {
               height={400}
               className="w-full h-auto object-cover"
             />
-          </div>
+          </motion.div>
         </div>
 
       </div>

@@ -1,10 +1,16 @@
-// components/HeroProperties.tsx
+"use client"
+import { motion } from 'framer-motion'; 
 import React from "react";
 import Link from "next/link";
 
 const HeroProperties: React.FC = () => {
   return (
-    <section className="py-16">
+    <motion.section
+    initial={{ y: 40, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1, ease: "easeOut" }} 
+    className="py-16">
         <div className="container mx-auto px-3.5">
         <div
       className="relative bg-[url('/images/properties.png')] bg-center bg-cover h-[320px] rounded-xl overflow-hidden"
@@ -23,14 +29,14 @@ const HeroProperties: React.FC = () => {
         <Link
           href="#"
           className="bg-[#D4A574] hover:bg-[#A87948] transition-colors text-white font-medium text-sm py-2.5 px-5 rounded-lg 
-          w-[225px] text-center"
+          w-[225px]"
         >
           View All Properties
         </Link>
       </div>
     </div>
         </div>
-    </section>
+    </motion.section>
   );
 };
 

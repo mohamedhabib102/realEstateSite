@@ -1,4 +1,5 @@
 "use client"
+import { motion } from 'framer-motion'; 
 import React from 'react';
 import Image from 'next/image';
 
@@ -42,12 +43,16 @@ const sliderData: SlideData[] = [
 
 
 const HeroSlider: React.FC = () => {
-
-    const primaryColor = '#cba168'; 
+ 
 
     return (
         <div className="container mx-auto px-4 py-8">
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <motion.div 
+             initial={{ y: 40, opacity: 0 }}
+             whileInView={{ y: 0, opacity: 1 }}
+             viewport={{ once: true }}
+             transition={{ duration: 1, ease: "easeOut" }}
+            className="rounded-2xl overflow-hidden shadow-2xl">
                 <Swiper
                     modules={[Navigation, Pagination]}
 
@@ -123,7 +128,7 @@ const HeroSlider: React.FC = () => {
                     </div>
                     
                 </Swiper>
-            </div>
+            </motion.div>
         </div>
     );
 };

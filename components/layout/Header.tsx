@@ -76,14 +76,21 @@ const linkClass = (path: string): string =>
                duration: 0.6,
                delay: 0.2,
              }}
-            className="lg:block md:block hidden bg-(--Primary) p-3 rounded-lg cursor-pointer
+            className="lg:block md:block hidden bg-(--Primary) transition hover:bg-[#A87948] p-3 rounded-lg cursor-pointer
             text-white w-[132px]">
               Get Started
             </motion.button>
                   
                   
-            <button
-
+            <motion.button
+            initial={{ x: 100, opacity: 0 }}
+             animate={{ x: 0, opacity: 1 }}
+             transition={{
+               type: "tween",
+               stiffness: 300,
+               duration: 0.6,
+               delay: 0.2,
+             }}
             className="lg:hidden md:hidden block w-10 h-5 relative cursor-pointer"
             aria-label="Toggle menu"
           >
@@ -95,7 +102,7 @@ const linkClass = (path: string): string =>
             <span
             className={`absolute bg-(--Primary) w-full h-1 left-0 top-4 transition-all`}
             ></span>
-          </button>
+          </motion.button>
         </motion.nav>
         </div>
       </header>

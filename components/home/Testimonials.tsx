@@ -1,4 +1,5 @@
-// components/Testimonials.tsx
+"use client"
+import { motion } from 'framer-motion'; 
 import React from "react";
 import CustomTitle from "../ui/CustomTitle";
 import Image from "next/image";
@@ -72,7 +73,16 @@ const Testimonials: React.FC = () => {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-10">
           {testimonials.map((t) => (
-            <div
+            <motion.div
+              initial={{ y: 100, opacity: 0 }} 
+              whileInView={{ y: 0, opacity: 1 }} 
+              viewport={{ once: true }}
+              transition={{
+                type: "tween",
+                stiffness: 300,
+                duration: 0.6,
+                delay: 0.2,
+              }} 
               key={t.id}
               className="bg-white p-6 rounded-[12px] border border-[#998F8F33]"
             >
@@ -97,7 +107,7 @@ const Testimonials: React.FC = () => {
                   <p className="text-sm text-[#6B7280] font-normal">{t.role}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -1,3 +1,5 @@
+"use client"
+import { motion } from 'framer-motion'; 
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { MdOutlineEmail } from 'react-icons/md'; 
@@ -53,7 +55,12 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-[#1e1e1e] text-gray-300 py-16 px-20 sm:px-6 lg:px-8">
+    <motion.footer 
+    initial={{ y: 40, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1, ease: "easeOut" }}    
+    className="bg-[#1e1e1e] text-gray-300 py-16 px-20 sm:px-6 lg:px-8">
       <div className="container mx-auto px-3.5">
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pb-10">
@@ -138,7 +145,7 @@ const Footer: React.FC = () => {
           </p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
