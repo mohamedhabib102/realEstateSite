@@ -34,7 +34,7 @@ const featuredProperties: Property[] = [
   {
     id: 2,
     imagePath: "/images/modern.png", 
-    price: "$3.200",
+    price: "$3.200/",
     type: 'For Rent',
     tag: null, 
     title: "Modern Luxury Villa",
@@ -96,14 +96,18 @@ const Properties:React.FC = () => {
                                 objectFit="cover" 
                                 className="rounded-t-[11px]"
                             />
+                            {feat.tag !== null && (
+                                <span className="absolute top-[21px] w-[103px] left-4 z-40 rounded-[45px] py-1.5 px-3 bg-[#F0E9E1] text-[#A87948] text-center 
+                                text-sm font-medium">Featured</span>
+                            )}
                         </div>
                         <div className="py-3 px-[22px]">
                             <div className="mb-3 flex items-center justify-between w-full">
-                              <h4 className="text-[22px] font-bold leading-7 text-[#A87948]">{feat.price}/<span className="font-semibold text-(--Secondary-txt)">{feat.type === "For Rent" && "month"}</span></h4>
+                              <h4 className="text-[22px] font-bold leading-7 text-[#A87948]">{feat.price}<span className="font-semibold text-(--Secondary-txt)">{feat.type === "For Rent" && "month"}</span></h4>
                               <span className={`
                                  py-1.5 px-3 rounded-4xl
                                  ${feat.type === "For Sale" ? "bg-[#15803D26] text-[#15803D]" :  
-                                    feat.type === "For Rent" ? "bg-[#284C7E40] text-(--Secondary-txt)" : ""
+                                    feat.type === "For Rent" ? "bg-[#DBEAFE] text-[#2563EB]" : ""
                                  }
                                 `}>{feat.type}</span>
                             </div>
