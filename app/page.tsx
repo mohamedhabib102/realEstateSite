@@ -1,17 +1,27 @@
 import { 
-  AboutSection,
-  ContactSection,
+  About, 
+  ContactSection, 
+  HeroProperties, 
   HeroSection, 
-  ServicesSection 
+  HeroSlider, 
+  Properties, 
+  Services,
+  Testimonials
 } from "@/components/home";
+import StatsSection from "@/components/ui/AnimateCounter";
 
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="text-black">
       <HeroSection />
-      <ServicesSection />
-      <AboutSection />
+      <About />
+      <StatsSection/>
+      <Services />
+      <Properties />
+      <HeroSlider />
+      <Testimonials />
+      <HeroProperties />
       <ContactSection />
     </main>
   );

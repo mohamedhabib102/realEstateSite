@@ -1,60 +1,35 @@
-"use client";
-
+"use client"
 import { motion } from "framer-motion";
-import React from "react";
+
+
 
 const HeroSection: React.FC = () => {
-  return (
-    <section className="relative w-full h-[calc(100vh-60px)] flex items-center justify-center overflow-hidden">
-      {/* الخلفية الفيديو */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/real-state-video.mp4" type="video/mp4" />
-      </video>
+    return (
+        <section className="relative bg-[url('/images/hero.png')] h-[calc(100vh-72px)]
+        bg-center bg-cover">
+            <div className="absolute inset-0 bg-black/55"></div>
 
 
-      <div className="absolute inset-0 bg-black/50"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-1/2 text-center
+            lg:w-5xl w-full">
+               <motion.h1
+                initial={{ opacity: 0, y: -20}} 
+                animate={{ opacity: 1, y: 0}} 
+                transition={{ duration: 1, ease: "easeOut" }} 
+               className="lg:text-7xl text-5xl font-bold lg:leading-16 leading-10 text-white
+               mb-7"
+               >Building Your Dreams,
+               One Property at a Time
+               </motion.h1>
 
-
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="relative z-10 text-center text-white px-4 max-w-3xl"
-      >
-<h1 className="text-4xl md:text-6xl font-bold mb-6 text-center">
-  <span className="block">مرحباً بك في</span>
-  <span className="block text-blue-400 my-2">RealEstate</span>
-  <span className="block">بوابتك لعالم العقارات بسهولة وأمان</span>
-</h1>
-
-
-        <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
-          موقعنا يربط بين الملاك والمستأجرين والمستثمرين في سوق العقارات من خلال منصة متكاملة تشمل خدمات البيع، الإيجار، التسويق، وإدارة العقارات.
-        </p>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="bg-blue-500 hover:bg-blue-600 cursor-pointer px-6 py-3 rounded-full font-semibold transition-all duration-300"
-          >
-            استكشف العقارات
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="border border-blue-400 cursor-pointer text-blue-400 px-6 py-3 rounded-full font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
-          >
-            تواصل معنا
-          </motion.button>
-        </div>
-      </motion.div>
-    </section>
-  );
-};
+               <p className="lg:w-[450px] w-[350px] m-auto text-[#D1D5DB] text-lg font-light leading-7 mb-4">Discover premium properties that match your lifestyle and investment goals with HAVENIX</p>
+                <div className="flex items-center justify-center gap-6">
+                  <button className="cursor-pointer py-2.5 px-4 bg-(--Primary) rounded-lg text-[#D1D5DB] font-semibold transition hover:bg-[#A87948]">Explore Properties</button>
+                  <button className="cursor-pointer py-2.5 px-4 rounded-lg border-white border text-white font-medium">Explore</button>
+                </div>
+            </div>
+        </section>
+    )
+}
 
 export default HeroSection;

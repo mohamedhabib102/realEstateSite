@@ -1,24 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400"]
 });
 
 export const metadata: Metadata = {
   title: "Real estate - منصة عقارية متكاملة",
-  description: "RealEstate هي منصة عقارية متكاملة تربط بين الملاك، المستأجرين، والمستثمرين. اكتشف خدمات البيع، الإيجار، التسويق، وإدارة العقارات بسهولة وأمان.",
+  description:
+    "RealEstate هي منصة عقارية متكاملة تربط بين الملاك، المستأجرين، والمستثمرين. اكتشف خدمات البيع، الإيجار، التسويق، وإدارة العقارات بسهولة وأمان.",
 };
-
 
 export default function RootLayout({
   children,
@@ -29,11 +25,8 @@ export default function RootLayout({
     <html lang="ar">
       <head>
         <link rel="icon" href="data:," />
-
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${poppins.variable} antialiased`}>
         <Header />
         {children}
         <Footer />
