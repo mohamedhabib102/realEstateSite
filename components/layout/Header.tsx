@@ -37,9 +37,9 @@ const linkClass = (path: string): string =>
 
 
       <header
-        className="bg-[#ffffff] overflow-hidden"
+        className="bg-[#ffffff] overflow-hidden w-full top-0 lef-0 z-50 fixed shadow_header"
       >
-        <div className="container mx-auto px-3.5">
+        <div className="container mx-auto lg:px-36 md:px-8 px-3.5">
           <motion.nav 
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1, }} 

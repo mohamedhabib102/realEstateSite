@@ -106,8 +106,8 @@ const stats: StatItem[] = [
 const StatsSection: React.FC = () => {
   return (
     <section className="bg-[#F8F8F8] py-8 lg:px-40">
-      <div className="container mx-auto px-3 5">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div className="container mx-auto lg:px-36 md:px-8 px-3.5">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-40 gap-8 text-center">
           
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center justify-center">

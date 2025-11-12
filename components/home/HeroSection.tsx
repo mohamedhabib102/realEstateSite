@@ -8,7 +8,8 @@ const HeroSection: React.FC = () => {
         <section 
         className="relative bg-[url('/images/hero.png')] h-[calc(100vh-72px)]
         bg-center bg-cover">
-            <div className="absolute inset-0 bg-black/55"></div>
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(26,54,93,0)_24.38%,rgba(26,54,93,0.2)_57%),linear-gradient(90deg,rgba(26,54,93,0.72)_0%,rgba(26,54,93,0.48)_50%,rgba(0,0,0,0)_100%)]"></div>
+
 
 
             <div className="absolute top-1/2 left-1/2 -translate-1/2 text-center
@@ -25,8 +26,8 @@ const HeroSection: React.FC = () => {
 
                <p className="lg:w-[450px] w-[350px] m-auto text-[#D1D5DB] text-lg font-light leading-7 mb-4">Discover premium properties that match your lifestyle and investment goals with HAVENIX</p>
                 <div className="flex items-center justify-center gap-6">
-                  <button className="cursor-pointer py-2.5 px-4 bg-(--Primary) rounded-lg text-[#FFFFFF] font-semibold transition hover:bg-transparent border-[#D4A574] border">Explore Properties</button>
-                  <button className="cursor-pointer py-2.5 px-4 rounded-lg border-white border text-white font-medium transition hover:bg-[#D4A574] hover:border-[#D4A574]">Explore</button>
+                  <button className="cursor-pointer py-2.5 px-4 bg-(--Primary) rounded-lg text-[#FFFFFF] font-semibold transition hover:bg-[#A87948]">Explore Properties</button>
+                  <button className="cursor-pointer py-2.5 px-4 rounded-lg border-white border text-white font-medium transition hover:border-[#A87948] hover:text-[#A87948]">Explore</button>
                 </div>
             </div>
         </section>

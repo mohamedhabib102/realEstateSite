@@ -7,7 +7,7 @@ import CustomTitle from "../ui/CustomTitle";
 const ContactSection: React.FC = () => {
   return (
     <section className="py-16 bg-[#F6F6F6]">
-        <div className="container mx-auto px-3.5">
+        <div className="container mx-auto lg:px-36 md:px-8 px-3.5">
         <div className="grid md:grid-cols-2 gap-10 items-center">
 
         <motion.div

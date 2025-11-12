@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
       transition={{ duration: 1, ease: "easeOut" }}
       className="bg-[#1e1e1e] text-gray-300 py-12 px-6 sm:px-8 md:px-12 lg:px-20"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto lg:px-36 md:px-8 px-3.5">
         {/* Grid layout responsive */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 pb-10">
           {/* Logo + description */}

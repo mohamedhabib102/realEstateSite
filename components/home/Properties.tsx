@@ -72,7 +72,7 @@ const Icon = ({ path }: { path: string }) => (
 const Properties:React.FC = () => {
     return (
         <section className="py-16">
-            <div className="container mx-auto px-3.5">
+            <div className="container mx-auto lg:px-36 md:px-8 px-3.5">
             <CustomTitle
             subTitle="Featured Properties"
             title="Exclusive Listings"
@@ -91,7 +91,7 @@ const Properties:React.FC = () => {
                 duration: 0.6,
                 delay: 0.2,
               }}             
-            className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+            className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
                 {featuredProperties.map((feat) => (
                     <div 
                     className="flex flex-col rounded-[11px] bg-white overflow-hidden border border-[#284C7E]/25 shadow-md"
@@ -123,7 +123,7 @@ const Properties:React.FC = () => {
                             </div>
                             <h4 className={`text-(--Secondary-txt) text-lg leading-6 font-bold mb-2`}>{feat.title}</h4>
                             <div className="flex items-center gap-4 mb-2">
-                                <span className="flex items-center gap-1.5 text-sm font-normal text-[#4B5563]">
+                                <span className="flex items-center gap-1 text-sm font-normal text-[#4B5563]">
                                     <Image
                                     src="images/bade.svg"
                                     alt="image"
@@ -133,7 +133,7 @@ const Properties:React.FC = () => {
                                     className="w-5"
                                     />
                                 {feat.beds} bed</span>
-                                <span className="flex items-center gap-1.5 text-sm font-normal text-[#4B5563]">
+                                <span className="flex items-center gap-1 text-sm font-normal text-[#4B5563]">
                                     <span className="font-bold text-lg">.</span><Image
                                     src="images/bath.svg"
                                     alt="image"
@@ -143,7 +143,7 @@ const Properties:React.FC = () => {
                                     className="w-5"
                                     />                                    
                                     {feat.baths} bath</span>
-                                <span className="flex items-center gap-1.5 text-sm font-normal text-[#4B5563]">
+                                <span className="flex items-center gap-1 text-sm font-normal text-[#4B5563]">
                                    <span className="font-bold text-lg">.</span><Image
                                     src="images/cm.svg"
                                     alt="image"

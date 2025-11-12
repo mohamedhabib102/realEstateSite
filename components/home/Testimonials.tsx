@@ -63,7 +63,7 @@ const StarIcon = () => (
 const Testimonials: React.FC = () => {
   return (
     <section className="py-16">
-      <div className="container mx-auto px-3.5">
+      <div className="container mx-auto lg:px-36 md:px-8 px-3.5">
         <CustomTitle
           subTitle="Testimonials"
           title="What Our Clients Say"

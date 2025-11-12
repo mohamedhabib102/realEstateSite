@@ -6,8 +6,8 @@ import Image from "next/image";
 const About: React.FC = () => {
   return (
     <section className="py-16">
-      <div className="container mx-auto px-3.5">
-        <div className="mt-[60px] flex flex-col lg:flex-row items-start justify-between gap-[75px]">
+      <div className="container mx-auto lg:px-36 md:px-8 px-3.5">
+        <div className="mt-[60px] flex flex-col lg:flex-row lg:items-start md:items-center justify-between gap-[75px]">
         
         <motion.div 
            initial={{ x: -100, opacity: 0 }} 

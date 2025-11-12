@@ -11,7 +11,7 @@ const HeroProperties: React.FC = () => {
     viewport={{ once: true }}
     transition={{ duration: 1, ease: "easeOut" }} 
     className="py-16">
-        <div className="container mx-auto px-3.5">
+        <div className="container mx-auto lg:px-36 md:px-8 px-3.5">
         <div
       className="relative bg-[url('/images/properties.png')] bg-center bg-cover h-[320px] rounded-xl overflow-hidden"
     >
