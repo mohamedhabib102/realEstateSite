@@ -33,7 +33,7 @@ const sliderData: SlideData[] = [
   },
   {
     id: 2,
-    imagePath: "/images/hero.png", 
+    imagePath: "/images/slider1.png", 
     tag: "EXCLUSIVE",
     title: "Luxury City Apartment",
     details: "Manhattan, NY • 3 Bed • 2 Bath • 1,800 sqft",
