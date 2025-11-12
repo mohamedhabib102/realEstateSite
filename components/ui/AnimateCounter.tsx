@@ -75,7 +75,7 @@ const CountUp: React.FC<CountUpProps> = ({ finalValue, duration = 3000 }) => {
 
 
   return (
-    <p ref={ref} className="lg:text-6xl text-5xl font-bold mb-2 text-[--Primary]">
+    <p ref={ref} className="lg:text-6xl text-5xl font-bold mb-2 text-(--Primary)">
       {count.toLocaleString()}
       {suffix}
     </p>
@@ -83,7 +83,7 @@ const CountUp: React.FC<CountUpProps> = ({ finalValue, duration = 3000 }) => {
 };
 
 
-// 6. بيانات الإحصائيات
+
 const stats: StatItem[] = [
   {
     value: '300+',
@@ -112,10 +112,10 @@ const StatsSection: React.FC = () => {
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center justify-center">
               
-              {/* استبدال الـ <p> القديمة بمكون الـ CountUp الجديد */}
+
               <CountUp finalValue={stat.value} />
               
-              <h3 className="text-lg font-semibold text-[--Secondary-txt] mb-2">
+              <h3 className="text-lg font-semibold text-(--Secondary-txt) mb-2">
                 {stat.title}
               </h3>
               

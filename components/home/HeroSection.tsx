@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
                 initial={{ opacity: 0, y: -20}} 
                 animate={{ opacity: 1, y: 0}} 
                 transition={{ duration: 1, ease: "easeOut" }} 
-               className="lg:text-7xl text-5xl font-bold lg:leading-16 leading-10 text-white
+               className="lg:text-7xl text-5xl font-bold lg:leading-18 leading-13 text-white
                mb-7"
                >Building Your Dreams,
                One Property at a Time

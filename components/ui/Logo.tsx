@@ -29,7 +29,7 @@ const Logo: React.FC<LogoDetails> = ({color}) =>{
             height={100}
             className="w-7 h-6"
             />
-            <span className={`${color === "white" ? "text-white" : "text-(--Secondary-txt)"} text-2xl font-bold`}>HAVENIX</span>
+            <span className={`${color === "white" ? "text-white" : "text-(--Secondary-txt)"} text-2xl font-black`}>HAVENIX</span>
          </Link>
          </motion.div>
     )
